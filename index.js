@@ -6,4 +6,10 @@ function getComputerChoice(){
     console.log("Computer picked" + " " + choices[choice])
     return choices[choice]
 }
-getComputerChoice()
+function round(playerSelection, computerSelection){
+    playerSelection = playerSelection.toLowerCase();
+    if(!["rock", "paper", "scissors"].includes(playerSelection)) {
+        return "invalid input.Please choose rock, paper, scissors.";
+    }
+    
+}

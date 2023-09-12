@@ -29,4 +29,31 @@ function round(playerSelection, computerSelection){
 function game() {
     let playerScore = 0;
     let computerScore = 0;
-}  
+    // add a for loop to make the game play 
+    for (let round = 1; round <= 5; round++) {
+        const playerSelection = prompt(`Round ${round}: Enter your choice (rock, paper, or scissors):`);
+        const computerSelection = getComputerChoice();
+        const result = playRound(playerSelection, computerSelection);
+        console.log(result);
+        if (result.includes("win")) {
+            playerScore++;
+          } else if (result.includes("lose")) {
+            computerScore++;
+          }
+        }
+        console.log("Game over!");
+        console.log(`Player Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+        // to check who win the game
+        if (playerScore > computerScore) {
+            console.log("Congratulations! You win the game!");
+          } else if (computerScore > playerScore) {
+            console.log("Sorry, you lose the game.");
+          } else {
+            console.log("It's a tie game!");
+          }
+    }  
+        
+
+
+

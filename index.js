@@ -7,7 +7,7 @@ function getComputerChoice(){
     return choices[choice]
 }
 // to create round for the playerSelection and computerSelection
-function round(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection){
     playerSelection = playerSelection.toLowerCase();
     if(!["rock", "paper", "scissors"].includes(playerSelection)) {
         return "invalid input.Please choose rock, paper, scissors.";
@@ -26,7 +26,7 @@ function round(playerSelection, computerSelection){
       }
 }
 // to create game for playerSelection and computerSelection
-function game() {
+function game(){
     let playerScore = 0;
     let computerScore = 0;
     // add a for loop to make the game play 
@@ -52,8 +52,7 @@ function game() {
           } else {
             console.log("It's a tie game!");
           }
-    }  
+    } 
+    game(); 
         
-
-
-
+    
